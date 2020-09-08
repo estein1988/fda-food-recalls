@@ -12,6 +12,13 @@ class RecallsController < ApplicationController
         render json: @recall
     end
 
+    def filterByState
+        @recalls = Recall.all.select do |recall|
+            recall.state == params[:state]
+        end
+        render json: @recalls
+    end
+
     def create 
         @recall = Recall.create({
             classification: params[:classifcation],
