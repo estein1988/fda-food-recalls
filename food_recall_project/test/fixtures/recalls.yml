@@ -1,0 +1,55 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  classification: MyString
+  center_classification_date: MyString
+  report_date: MyString
+  postal_code: MyString
+  termination_date: MyString
+  recall_initiation_date: MyString
+  recall_number: MyString
+  city: MyString
+  more_code_info: MyString
+  event_id: MyString
+  distribution_pattern: MyString
+  openfda: MyString
+  recalling_firm: MyString
+  voluntary_mandated: MyString
+  state: MyString
+  reason_for_recall: MyString
+  initial_firm_notification: MyString
+  status: MyString
+  product_type: MyString
+  country: MyString
+  product_description: MyString
+  code_info: MyString
+  address_1: MyString
+  address_2: MyString
+  product_quantity: MyString
+
+two:
+  classification: MyString
+  center_classification_date: MyString
+  report_date: MyString
+  postal_code: MyString
+  termination_date: MyString
+  recall_initiation_date: MyString
+  recall_number: MyString
+  city: MyString
+  more_code_info: MyString
+  event_id: MyString
+  distribution_pattern: MyString
+  openfda: MyString
+  recalling_firm: MyString
+  voluntary_mandated: MyString
+  state: MyString
+  reason_for_recall: MyString
+  initial_firm_notification: MyString
+  status: MyString
+  product_type: MyString
+  country: MyString
+  product_description: MyString
+  code_info: MyString
+  address_1: MyString
+  address_2: MyString
+  product_quantity: MyString

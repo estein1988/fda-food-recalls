@@ -1,0 +1,2 @@
+class Recall < ApplicationRecord
+end
