@@ -37,3 +37,9 @@ function populateStates(states) {
 }
 
 populateStates(states)
+
+fetch('http://localhost:3000/users')
+    .then(response => response.json())
+    .then(users => {
+        const usernameField = document.querySelector('#username-field')
+    })

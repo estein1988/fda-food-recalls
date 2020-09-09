@@ -1,4 +1,7 @@
+SaveRecall.destroy_all
 Recall.destroy_all
+User.destroy_all
+
 
 require 'pry'
 require 'json'
@@ -35,3 +38,15 @@ data_hash["results"].each do |result|
         product_quantity: result["product_quantity"]
     )
 end
+
+user1 = User.create(username: "FoodTracker1", first_name: "Tom", last_name: "Adams")
+user2 = User.create(username: "FDABlogger", first_name: "Tracey", last_name: "Green")
+user3 = User.create(username: "SafetyGeek", first_name: "Kevin", last_name: "Simon")
+
+recallSave1 = SaveRecall.create(user_id: user1, recall_id: 1)
+recallSave2 = SaveRecall.create(user_id: user2, recall_id: 2)
+recallSave3 = SaveRecall.create(user_id: user3, recall_id: 3)
+recallSave4 = SaveRecall.create(user_id: user1, recall_id: 4)
+recallSave5 = SaveRecall.create(user_id: user2, recall_id: 5)
+recallSave6 = SaveRecall.create(user_id: user3, recall_id: 6)
+recallSave7 = SaveRecall.create(user_id: user1, recall_id: 7)
