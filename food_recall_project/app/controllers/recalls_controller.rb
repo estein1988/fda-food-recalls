@@ -19,6 +19,21 @@ class RecallsController < ApplicationController
         render json: @recalls
     end
 
+    def filterByCompany
+        @recalls = Recall.all.select do |recall|
+            recall.recalling_firm == params[:recalling_firm]
+        end
+        render json: @recalls
+    end
+
+    def filterByRecall
+        @recalls = Recall.all.select do |recall|
+            recall.recall_number == params[:recall_number]
+        end
+        render json: @recalls 
+    end
+
+
     def create 
         @recall = Recall.create({
             classification: params[:classifcation],
