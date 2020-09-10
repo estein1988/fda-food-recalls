@@ -13,6 +13,3 @@ fetch(`http://localhost:3000/users/${user_id}`)
         userInfoList.appendChild(userInfo)
         })
     })
-
-    // 'http://localhost:3001/show_card.html?recall_number=F-2061-2014'
-    // 'http://localhost:3001/show_card.html?recall_number=140073'

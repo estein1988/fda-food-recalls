@@ -1,9 +1,17 @@
 class RecallsController < ApplicationController
 
     def index
-        @recalls = Recall.all 
-
-        render json: @recalls, include: [:save_recalls]
+        if params[:search_term]
+            @recalls = Recall.where(
+                "product_description LIKE :search_term", 
+                {
+                search_term: "%#{params[:search_term]}%"
+                }
+            )
+        else
+            @recalls = Recall.all 
+        end
+        render json: @recalls.limit(100)
     end
 
     def show 
