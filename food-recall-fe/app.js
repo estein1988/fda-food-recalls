@@ -1,5 +1,37 @@
+const searchParams = new URLSearchParams(window.location.search)
+const search_term = searchParams.get("search_term")
+
+let url = 'http://localhost:3000/recalls'
+const formResults = document.querySelector('#formresults')
+
+if (search_term) {
+    url = `${url}?search_term=${search_term}`
+    fetchRecalls()
+}
+
+function fetchRecalls() {
+    fetch(url)
+    .then(response => response.json())
+    .then(handleRecalls)
+}
+
+function handleRecalls(recalls) {
+    recalls.forEach(recall => {
+        const recallCard = document.createElement('div')
+        const recallingFirm = document.createElement('h3')
+        const recallDescription = document.createElement('p')
+
+        // recallingFirm.innerHTML = `<a href='recalling_firm.html?recalling_firm=${company}'>${recall.id}</a>`
+        recallDescription.textContent = `${recall.address_1}, ${recall.city}, ${recall.state}`
+
+        formResults.appendChild(recallCard)
+        recallCard.append(recallingFirm, recallDescription)
+    })
+}
 
 const mainList = document.getElementById('stateList')
+
+
 
 // const states = results.state
 
