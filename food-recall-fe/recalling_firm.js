@@ -9,6 +9,7 @@ const recallList = document.querySelector('#companyList')
 
 function handleCompanies(recalls) {
     recalls.forEach(recall => {
+
         const recallCard = document.createElement('div')
         const recallingFirm = document.createElement('h3')
         const recallDescription = document.createElement('p')
