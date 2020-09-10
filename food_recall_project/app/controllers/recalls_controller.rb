@@ -3,13 +3,13 @@ class RecallsController < ApplicationController
     def index
         @recalls = Recall.all 
 
-        render json: @recalls
+        render json: @recalls, include: [:save_recalls]
     end
 
     def show 
         @recall = Recall.find(params[:id])
 
-        render json: @recall
+        render json: @recall, include: [:save_recalls]
     end
 
     def filterByState
