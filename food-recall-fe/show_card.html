@@ -8,6 +8,18 @@
 </head>
 <body>
     <h1>Here's the final card</h1>
+    <h2>Save this card:</h2>
+    
+    <form method="POST" action="http://localhost:3000/save_recalls">
+        <label for="user_id">User ID</label>
+        <input name="user_id" type="text" id="user-id-field">
+        
+        <label for="recall_id">Recall ID</label>
+        <input name="recall_id" type="text" id="recall-id-field">
+
+        <input type="submit" value="Submit">
+    </form>
+    
     <main id="recall"></main>
 </body>
 </html>

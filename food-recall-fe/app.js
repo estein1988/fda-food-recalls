@@ -38,8 +38,11 @@ function populateStates(states) {
 
 populateStates(states)
 
-fetch('http://localhost:3000/users')
-    .then(response => response.json())
-    .then(users => {
-        const usernameField = document.querySelector('#username-field')
-    })
+
+
+//this code isn't doing anything, the form submittal is still working without it:
+// fetch('http://localhost:3000/users')
+//     .then(response => response.json())
+//     .then(users => {
+//         const usernameField = document.querySelector('#username-field')
+//     })
