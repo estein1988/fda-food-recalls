@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FDA Food Recalls</title>
     <script src="app.js" defer></script>
 </head>
-<body>
-    <header>
-        <h1>Welcome to FDA Recalls</h1>
+<body id="page">
+    <header id="header-background">
+        <h1 id="title">Recalls: It's What's For Dinner</h1>
+        <h3 id="subtitle">Every FDA food recall since 2013</h3>
+        <img src="police-siren.png" width="20" height="20">
+        <div class="logo"></div>
     </header>
-    
-    <form method="POST" action="http://localhost:3000/users">
+    <div id="content">
+    <form method="POST" action="http://localhost:3000/users" id="create-user">
         
         <label for="username-field">Username</label>
         <input name="username" type="text" id="username-field">
@@ -25,13 +29,16 @@
         <input type="submit" value="Submit">
     </form>
 
-    <h4><a href="save_recalls.html">View Your Saved Recalls</a></h4>
-
+    <h4 id="saved-recalls"><a href="save_recalls.html">View Your Saved Recalls</a></h4>
+    <h2 id="select">Select Your State</h2>
     <main id="stateList">
         <ul>
 
         </ul>
     </main>
-    
+    </div>
+    <footer>
+
+    </footer>
 </body>
 </html>
