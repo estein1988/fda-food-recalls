@@ -1,9 +1,16 @@
 const searchParams = new URLSearchParams(window.location.search)
 const state = searchParams.get('state')
+const search_term = searchParams.get("search_term")
 
 const recallList = document.querySelector('#recallCompanyList')
 
-fetch(`http://localhost:3000/state?state=${state}`)
+let url = `http://localhost:3000/state?state=${state}`
+
+if (search_term) {
+    url = `${url}?search_term=${search_term}`
+}
+
+fetch(url)
     .then(response => response.json())
     .then(handleStates)
 
@@ -26,3 +33,5 @@ function handleStates(recalls) {
         recallCard.append(recallingFirm, recallDescription)
     })
 }
+
+
