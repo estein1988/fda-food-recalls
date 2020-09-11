@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
 body {
     background-color: rgb(245, 245, 245);
 }
@@ -11,4 +13,33 @@ div {
     margin: 1rem;
     padding: 1rem;
     box-shadow: 2px 2px 10px rgb(211, 211, 211);
+    background-color: #5D5C61;
+    color: #8cb2cf;
+    width: 500px;
+}
+
+
+#page {
+    font-family: 'Fjalla One', sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: center;
+    background-color: #557A95;
+}
+
+a {
+    color: #ffffff;
+}
+
+a:hover {
+    color:  #B1A296;
+}
+
+#companyName {
+        font-size: 50px;
+        padding: 15px;
+        border: solid;
+        border-color: #ffffff;
+        color: #ffffff
 }

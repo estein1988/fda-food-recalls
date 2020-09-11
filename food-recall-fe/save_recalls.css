@@ -2,11 +2,11 @@
 
 #page {
     font-family: 'Fjalla One', sans-serif;
-    background-color: #5D5C61;
     display: flex;
     flex-direction: column;
     /* justify-content: space-around; */
     align-items: center;
+    background-color: #557A95;
 }
 
 #header {
@@ -32,23 +32,45 @@ h1 {
 
 li {
     padding: 10px;
+    font-size: 25px;
 
 }
 
 a:hover {
     color:  #B1A296;
-  }
+}
 
-  h2 {
-      color: #7395AE;
-      font-size: 35px;
-  }
+h2 {
+    color: #7395AE;
+    font-size: 35px;
+}
 
-  a {
+a {
     color: #ffffff;
     padding: 60px;
-  }
+}
 
-  #bottomhalf {
-      background-color: #7395AE
-  }
+#bottomhalf {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+
+
+}
+
+#tophalf {
+    background-color: #5D5C61;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+}
+
+#select{
+    margin: 40px;
+    font-size: 40px;
+    color: #B1A296;
+
+}
