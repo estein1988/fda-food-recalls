@@ -142,3 +142,20 @@ input[type=submit] {
     -webkit-border-radius: 5px;
     border-radius: 5px; 
 }
+
+p{
+    margin: 0px;
+}
+
+#footer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #B1A296;
+    margin: 0px;
+    color: #FFFFFF;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+}
