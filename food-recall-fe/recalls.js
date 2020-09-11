@@ -8,59 +8,50 @@ fetch(`http://localhost:3000/recalls/${recallNumber}`)
     .then(recall => {
         const recallCard = document.createElement('div')
         const recallingID = document.createElement('h3')
-        const recallReportDate = document.createElement('p')
-        const recallPostalCode = document.createElement('p')
-        const classification  = document.createElement('p')
-        const centerClassificationDate  = document.createElement('p')
-        const terminationDate  = document.createElement('p')
-        const recallInitiationDate  = document.createElement('p')
-        const numberRecall = document.createElement('p')
-        const city = document.createElement('p')
-        const moreCodeInfo = document.createElement('p')
-        const eventId = document.createElement('p')
-        const distributionPattern = document.createElement('p')
-        const openFda = document.createElement('p')
-        const recallingFirm  = document.createElement('p')
-        const voluntaryMandated = document.createElement('p')
-        const state = document.createElement('p')
-        const reasonForRecall = document.createElement('p')
-        const initialFirmNotification = document.createElement('p')
-        const status = document.createElement('p')
-        const productType = document.createElement('p')
-        const country = document.createElement('p')
-        const productDescription = document.createElement('p')
-        const codeInfo = document.createElement('p')
-        const address1 = document.createElement('p')
-        const address2 = document.createElement('p')
-        const productQuantity = document.createElement('p')
+        const numberRecall = document.createElement('div')
+        const eventId = document.createElement('div')
+        const classification = document.createElement('div')
+        const recallReportDate = document.createElement('div')
+        const centerClassificationDate  = document.createElement('div')
+        const terminationDate  = document.createElement('div')
 
-        recallingID.textContent = recall.id
-        recallReportDate.textContent = recall.reason_for_recall
-        recallPostalCode.textContent = recall.product_description
-        classification.textContent = recall.classification
-        centerClassificationDate.textContent = recall.center_classification_date
-        terminationDate.textContent = recall.termination_date
-        recallInitiationDate.textContent = recall.recall_initiation_date
-        numberRecall.textContent = recall.recall_number
-        city.textContent = recall.city
-        moreCodeInfo.textContent = recall.more_code_info
-        eventId.textContent = recall.event_id
-        distributionPattern.textContent = recall.distribution_pattern
-        openFda.textContent = recall.open_fda
-        recallingFirm.textContent = recall.recalling_firm
+        const companyData = document.createElement('h3')
+        const recallingFirm  = document.createElement('div')
+        const address = document.createElement('div')
+        const voluntaryMandated = document.createElement('div')
+        const initialFirmNotification = document.createElement('div')
+        
+        const productInformation = document.createElement('h3')
+        const distributionPattern = document.createElement('div')
+        const reasonForRecall = document.createElement('div')
+        const productType = document.createElement('div')
+        const productDescription = document.createElement('div')
+        const codeInfo = document.createElement('div')
+        const productQuantity = document.createElement('div')
+        const status = document.createElement('div')
+
+        recallingID.textContent = `Recall ID: ${recall.id}`
+        numberRecall.textContent = `Recall Number: ${recall.recall_number}`
+        eventId.textContent = `Event ID: ${recall.event_id}`
+        classification.textContent = `Classification`
+        recallReportDate.textContent = `Report Date: ${recall.report_date}`
+        centerClassificationDate.textContent = `Center Classification Date: ${recall.center_classification_date}`
+        terminationDate.textContent = `Termination Date: ${recall.termination_date}`
+        companyData.textContent = `Company Information`
+        recallingFirm.textContent = `Name: ${recall.recalling_firm}`
+        address.textContent = `Address: ${recall.address_1} ${recall.address_2} ${recall.city}, ${recall.state} ${recall.postal_code}` 
         voluntaryMandated.textContent = recall.voluntary_mandated
-        state.textContent = recall.state
-        reasonForRecall.textContent = recall.reason_for_recall
-        initialFirmNotification.textContent = recall.initial_firm_notification
-        status.textContent = recall.status
-        productType.textContent = recall.produc_type
-        country.textContent = recall.country
-        productDescription.textContent = recall.product_description
-        codeInfo.textContent = recall.code_info
-        address1.textContent = recall.address_1
-        address2.textContent = recall.address_2
-        productQuantity.textContent = recall.product_quantity
+        initialFirmNotification.textContent = `Initial firm notification ${recall.initial_firm_notification}`
+        
+        productInformation.textContent = `Product Information`       
+        distributionPattern.textContent = `Distribution Pattern: ${recall.distribution_pattern}`
+        reasonForRecall.textContent = `Reason for recall: ${recall.reason_for_recall}`
+        productType.textContent = `Product Type: ${recall.product_type}`
+        productDescription.textContent = `Product Description: ${recall.product_description}`
+        codeInfo.textContent = `Product Code ${recall.code_info}`
+        productQuantity.textContent = `Product Quantity: ${recall.product_quantity}`
+        status.textContent = `Status: ${recall.status}`
 
         recallId.appendChild(recallCard)
-        recallCard.append(recallingID, recallReportDate, recallPostalCode, recallPostalCode, classification, centerClassificationDate, terminationDate, recallInitiationDate, numberRecall, city, moreCodeInfo, eventId, distributionPattern, openFda, recallingFirm, voluntaryMandated, state, reasonForRecall, initialFirmNotification, status, productType, country, productDescription, codeInfo, address1, address2, productQuantity)
+        recallCard.append(recallingID, numberRecall, eventId, classification, recallReportDate, centerClassificationDate, terminationDate, companyData, recallingFirm, address, voluntaryMandated, initialFirmNotification, productInformation, distributionPattern, reasonForRecall, productType, productDescription, codeInfo, productQuantity, status)
     })
