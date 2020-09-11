@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+#page {
+    font-family: 'Fjalla One', sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: center;
+    background-color: #557A95;
+}
+
+#tophalf {
+    background-color: #5D5C61;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+}
+
+a {
+    color: #ffffff;
+    padding: 60px;
+}
+
+a:hover {
+    color:  #B1A296;
+}
+
+#title {
+    font-size: 50px;
+    padding: 15px;
+    border: solid;
+    border-color: #7395AE;
+    color: #ffffff
+    }
+
+#recallCompanyList {
+    display: flex;
+    flex: 1;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    column-count: 2;
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    padding: 10px;
+}

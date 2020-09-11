@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="show_card.css"/>
     <script src="show_card.js" defer ></script>
     <title>Show Final Card</title>
 </head>
-<body>
-    <h1>Product Recall Information</h1>
+<body id="page">
+    <h1 id="title">Product Recall Information</h1>
     
     <main id="recall"></main>
     
-    <h2>Save this card:</h2>
-    
-    <form method="POST" action="http://localhost:3000/save_recalls">
-        <label for="user_id">User ID</label>
-        <input name="user_id" type="text" id="user-id-field">
-        
-        <label for="recall_id">Recall ID</label>
-        <input name="recall_id" type="text" id="recall-id-field">
-
-        <input type="submit" value="Submit">
-    </form>
-    
+    <div id="bottom">
+        <h2 id="save">Save This Recall:</h2>
+        <form method="POST" action="http://localhost:3000/save_recalls">
+            <label for="user_id">User ID</label>
+            <input name="user_id" type="text" id="user-id-field">
+            <label for="recall_id">Recall ID</label>
+            <input name="recall_id" type="text" id="recall-id-field">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>

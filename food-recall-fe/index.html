@@ -11,8 +11,6 @@
     <header id="header-background">
         <h1 id="title">Recalls: It's What's For Dinner</h1>
         <h3 id="subtitle">Every FDA food recall since 2013</h3>
-        <img src="police-siren.png" width="20" height="20">
-        <div class="logo"></div>
     </header>
     <div id="content">
     <form method="POST" action="http://localhost:3000/users" id="create-user">
@@ -37,13 +35,14 @@
         </ul>
     </main>
     </div>
-
-    <form method="GET" action="/">
+    <section id="searcharea">
+        <h2 id="search">Search By Food</h2>
+    <form id="searchForm" method="GET" action="/">
         <input name="search_term"/>
-        <input type="submit" value="Search!"/>
+        <input type="submit" value="SEARCH"/>
     </form>
     <div id="formresults"></div>
-    
+    </section>
     <footer>
         <p>Copyright &copy; 2020 - All Rights Reserved - United States Food & Drug Administration -<a href="https:://open.fda.gov">open.fda.gov</a></p>
         <div> Meta-data:
