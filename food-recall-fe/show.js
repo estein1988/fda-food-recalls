@@ -19,8 +19,7 @@ function handleStates(recalls) {
         const recallingFirm = document.createElement('h3')
         const recallDescription = document.createElement('p')
 
-        recallingFirm.innerHTML = `<a href='recalling_firm.html?recalling_firm=${company}'>${company}</a>`
-        // recallDescription.textContent = `${recall.address_1}, ${recall.city}, ${recall.state}`
+        recallingFirm.innerHTML = `<a href="recalling_firm.html?recalling_firm=${company}">${company}</a>`
 
         recallList.appendChild(recallCard)
         recallCard.append(recallingFirm, recallDescription)
