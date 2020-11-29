@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_09_09_211515) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "recalls", force: :cascade do |t|
     t.string "classification"
     t.string "center_classification_date"
@@ -43,8 +46,8 @@ ActiveRecord::Schema.define(version: 2020_09_09_211515) do
   end
 
   create_table "save_recalls", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "recall_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "recall_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["recall_id"], name: "index_save_recalls_on_recall_id"
